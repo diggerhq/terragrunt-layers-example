@@ -5,3 +5,5 @@ generate_projects:
     createWorkspace: true
     defaultWorkflow: default
     cascadeDependencies: false 
+    dependsOnOrdering: true
+    
