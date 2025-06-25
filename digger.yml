@@ -1,0 +1,7 @@
+generate_projects:
+  terragrunt_parsing:
+    parallel: true
+    createProjectName: true
+    createWorkspace: true
+    defaultWorkflow: default
+    cascadeDependencies: false 
