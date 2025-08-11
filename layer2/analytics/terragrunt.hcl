@@ -39,3 +39,4 @@ inputs = {
   rds_endpoint    = dependency.storage.outputs.rds_endpoint
   log_group_names = dependency.monitoring.outputs.log_group_names
 } 
+
