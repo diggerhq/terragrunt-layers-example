@@ -84,3 +84,6 @@ output "api_config" {
     api_endpoint_ids = null_resource.api_endpoints[*].id
   }
 } 
+
+
+resource "null_resource" "test" {}
