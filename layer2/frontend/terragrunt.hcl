@@ -30,3 +30,4 @@ inputs = {
   dashboard_names = dependency.monitoring.outputs.dashboard_names
   log_group_names = dependency.monitoring.outputs.log_group_names
 } 
+
