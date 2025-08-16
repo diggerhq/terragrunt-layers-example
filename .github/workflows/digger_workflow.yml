@@ -33,6 +33,7 @@ jobs:
           setup-terraform: true
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          upload-plan-destination: 'aws'
           upload-plan-destination-s3-bucket: terraform-artifacts-1755303844500
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
