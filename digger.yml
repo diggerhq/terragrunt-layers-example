@@ -22,4 +22,5 @@ workflows:
     apply:
       steps:
         - init
+        - run: echo "applying from planfile $DIGGER_PLANFILE"
         - run: terragrunt apply -lock-timeout=3m --auto-approve --terragrunt-non-interactive $DIGGER_PLANFILE
