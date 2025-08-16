@@ -81,3 +81,6 @@ output "frontend_config" {
     web_asset_ids              = null_resource.web_assets[*].id
   }
 } 
+
+
+resource "null_resource" "testtest" {}
