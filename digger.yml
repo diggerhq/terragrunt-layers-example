@@ -1,4 +1,4 @@
-respect_layers: true
+respect_layers: false
 
 generate_projects:
   terragrunt_parsing:
