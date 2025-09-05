@@ -11,5 +11,3 @@ inputs = {
   project_name = "terragrunt-example"
 } 
 
-
-

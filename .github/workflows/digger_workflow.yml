@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: ${{ fromJSON(github.event.inputs.spec).job_id }}
         run: echo "job id ${{ fromJSON(github.event.inputs.spec).job_id }}"
-      - uses: diggerhq/digger@v0.6.118
+      - uses: diggerhq/digger@v0.6.123
         with:
           digger-spec: ${{ inputs.spec }}
           setup-aws: true
@@ -33,7 +33,9 @@ jobs:
           setup-terraform: true
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          cache-dependencies: true
+          cache-dependencies-s3: true
+          cache-dependencies-s3-bucket: s3://terraform-cache-1756318349465/cache
+          cache-dependencies-s3-region: us-east-1
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
