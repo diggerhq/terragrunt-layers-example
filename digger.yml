@@ -12,14 +12,14 @@ generate_projects:
     dependsOnOrdering: false
     
 
-workflows:
-  default:
-    plan:
-      filter_regex: "((?i)secret.*:\\s\")[^\"]*"
-      steps:
-        - init
-        - run: terragrunt plan --provider-cache=false -input=false -parallelism=5 -refresh -no-color -out $DIGGER_PLANFILE
-    apply:
-      steps:
-        - init
-        - run: terragrunt apply -lock-timeout=3m --auto-approve --terragrunt-non-interactive $DIGGER_PLANFILE
+# workflows:
+#   default:
+#     plan:
+#       filter_regex: "((?i)secret.*:\\s\")[^\"]*"
+#       steps:
+#         - init
+#         - run: terragrunt plan --provider-cache=false -input=false -parallelism=5 -refresh -no-color -out $DIGGER_PLANFILE
+#     apply:
+#       steps:
+#         - init
+#         - run: terragrunt apply -lock-timeout=3m --auto-approve --terragrunt-non-interactive $DIGGER_PLANFILE
